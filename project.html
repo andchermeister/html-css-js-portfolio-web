@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch-a-Sketch</title>
+        <link rel="stylesheet" href="project.css">
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="title">Etch-a-Sketch</div>
+            <div class="mode">Mode: Coloring</div>
+            <div class="board"></div>
+            <div class="buttons">
+                <button class="button" onclick="changeColor('black')">Black</button>
+                <button class="button" onclick="changeColor('white')">White</button>
+                <button class="button" onclick="changeColor('white')">Erase</button>
+                <button class="button" onclick="changeColor('random')">Random RGB</button>   
+                <button class="button" onclick="reset()">Reset Canvas</button>
+            </div>
+            <div class="board-size">
+                <label class="label" for="boardSize">Set board size:</label>
+                <input class="input" type="text" id="boardSize" name="boardSize"
+                    placeholder="Enter a board size..." value="16" onchange="setBoardSize(this.value)">
+                <button class="button">Set size</button>
+            </div>
+            <button class="button" onclick="location.href='index.html'">Go back to main page</button>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="project.js"></script>
+    </body>
+</html>
